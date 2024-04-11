@@ -5,8 +5,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="ChatRoomMapper">
 
     <insert id="create" parameterType="ChatRoomDTO">
-        INSERT INTO CHATROOMS (ROOMTITLE, ROOMDESCRIPTION, CURRENTCOUNT, MAXAMOUNT, LOCATION, CREATIONDATE, CATEGORY, LEADERID)
-        VALUES (#{roomTitle}, #{roomDescription}, #{currentCount}, #{maxAmount}, #{location}, #{creationDate}, #{category}, #{leaderId})
+        INSERT INTO CHATROOMS (ROOMTITLE, ROOMDESCRIPTION, MAXAMOUNT, LOCATION, CREATIONDATE, CATEGORY, LEADERID)
+        VALUES (#{roomTitle}, #{roomDescription}, #{maxAmount}, #{location}, #{creationDate}, #{category}, #{leaderId})
     </insert>
 
     <update id="update" parameterType="ChatRoomDTO">
