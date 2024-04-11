@@ -7,6 +7,6 @@
 </head>
 <body>
 <h1>테스트용 메인화면입니다.</h1>
-<a href="/chat"></a>
+<a href="/chatroom">test</a>
 </body>
 </html>
