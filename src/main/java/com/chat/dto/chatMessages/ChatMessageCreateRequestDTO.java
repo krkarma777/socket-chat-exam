@@ -11,9 +11,9 @@ import java.time.LocalDateTime;
 @Setter
 public class ChatMessageCreateRequestDTO {
     private MessageType messageType;
-    private LocalDateTime sendTime;
+    private LocalDateTime sendTime = LocalDateTime.now();
     private Long chatRoomId;
-    private Long senderId;
+    private String senderId;
     private String message;
     private ChatReport reported = ChatReport.No;
 }
