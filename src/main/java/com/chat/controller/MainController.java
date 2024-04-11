@@ -11,8 +11,12 @@ public class MainController {
         return "home";
     }
 
-    @GetMapping("/chatroom")
+    @GetMapping("/chatRoom")
     public String chatRoom() {
         return "chatRoom";
+    }
+    @GetMapping("/chatRoomMembers")
+    public String chatRoomMembers() {
+        return "chatRoomMembers";
     }
 }
