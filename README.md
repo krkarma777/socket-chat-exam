@@ -1,4 +1,6 @@
--- 채팅방 대화 내용 테이블
+=================================<br>
+-- 채팅방 대화 내용 테이블<br>
+=================================<br>
 CREATE SEQUENCE chat_message_id_seq START WITH 1 INCREMENT BY 1;
 
 CREATE TABLE chat_messages (
@@ -21,8 +23,9 @@ BEGIN
 END;
 /
 
-
--- 채팅방 정보 테이블
+=================================<br>
+-- 채팅방 정보 테이블<br>
+=================================<br>
 CREATE SEQUENCE chat_room_id_seq START WITH 1 INCREMENT BY 1;
 
 CREATE TABLE chat_rooms (
@@ -47,8 +50,9 @@ BEGIN
 END;
 /
 
-
--- 유저 채팅방 정보 테이블
+=================================<br>
+-- 유저 채팅방 정보 테이블<br>
+=================================<br>
 CREATE TABLE chat_room_members (
     chat_room_id NUMBER NOT NULL,
     userid NUMBER NOT NULL,
