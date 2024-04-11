@@ -4,12 +4,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="ChatRoomMapper">
 
-    <insert id="create" parameterType="com.chat.dto.chatRoom.ChatRoomCreateRequestDTO">
+    <insert id="create" parameterType="ChatRoomDTO">
         INSERT INTO CHATROOMS (ROOMTITLE, ROOMDESCRIPTION, CURRENTCOUNT, MAXAMOUNT, LOCATION, CREATIONDATE, CATEGORY, LEADERID)
         VALUES (#{roomTitle}, #{roomDescription}, #{currentCount}, #{maxAmount}, #{location}, #{creationDate}, #{category}, #{leaderId})
     </insert>
 
-    <update id="update" parameterType="com.chat.dto.chatRoom.ChatRoomUpdateRequestDTO">
+    <update id="update" parameterType="ChatRoomDTO">
         UPDATE CHATROOMS
         SET ROOMTITLE = #{roomTitle}, ROOMDESCRIPTION = #{roomDescription}, CURRENTCOUNT = #{currentCount}, MAXAMOUNT = #{maxAmount},
             LOCATION = #{location}, CREATIONDATE = #{creationDate}, CATEGORY = #{category}, LEADERID = #{leaderId}
@@ -20,19 +20,19 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         DELETE FROM CHATROOMS WHERE ID = #{id}
     </delete>
 
-    <select id="selectAll" resultType="com.chat.dto.chatRoom.ChatRoomDTO">
+    <select id="selectAll" resultType="ChatRoomDTO">
         SELECT * FROM CHATROOMS
     </select>
 
-    <select id="selectByCategory" resultType="com.chat.dto.chatRoom.ChatRoomDTO" parameterType="String">
+    <select id="selectByCategory" resultType="ChatRoomDTO" parameterType="String">
         SELECT * FROM CHATROOMS WHERE CATEGORY = #{category}
     </select>
 
-    <select id="selectById" resultType="com.chat.dto.chatRoom.ChatRoomDTO" parameterType="int">
+    <select id="selectById" resultType="ChatRoomDTO" parameterType="int">
         SELECT * FROM CHATROOMS WHERE ID = #{id}
     </select>
 
-    <select id="selectByLocation" resultType="com.chat.dto.chatRoom.ChatRoomDTO" parameterType="String">
+    <select id="selectByLocation" resultType="ChatRoomDTO" parameterType="String">
         SELECT * FROM CHATROOMS WHERE LOCATION = #{location}
     </select>
 

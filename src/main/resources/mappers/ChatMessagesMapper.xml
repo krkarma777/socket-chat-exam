@@ -15,7 +15,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         WHERE ID = #{id}
     </update>
 
-    <select id="chatMessagesByRoomId" resultType="com.example.dto.ChatMessageResponseDTO">
+    <select id="chatMessagesByRoomId" resultType="ChatMessageResponseDTO">
         SELECT * FROM CHATMESSAGES WHERE CHATROOMID = #{chatRoomId}
     </select>
 
