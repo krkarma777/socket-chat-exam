@@ -5,8 +5,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="ChatMessagesMapper">
 
     <insert id="create" parameterType="ChatMessageCreateRequestDTO">
-        INSERT INTO CHATMESSAGES (ID, MESSAGETYPE, SENDTIME, CHATROOMID, SENDERID, MESSAGE, REPORTED)
-        VALUES (#{id}, #{messageType}, #{sendTime}, #{chatRoomId}, #{senderId}, #{message}, #{reported})
+        INSERT INTO CHATMESSAGES (MESSAGETYPE, SENDTIME, CHATROOMID, SENDERID, MESSAGE, REPORTED)
+        VALUES (#{messageType,jdbcType=VARCHAR}, #{sendTime}, #{chatRoomId}, #{senderId}, #{message}, #{reported})
     </insert>
 
     <update id="report" parameterType="ChatMessageReportRequestDTO">
