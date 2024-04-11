@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Chat Messages Management</title>
+    <title>채팅 메시지 테스트</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.0/sockjs.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
@@ -78,8 +78,8 @@
 </form>
 <table id="messages">
     <tr>
-        <th>Chat Room ID</th>
-        <th>Message</th>
+        <th>채팅방 ID</th>
+        <th>메세지</th>
     </tr>
 </table>
 </body>
